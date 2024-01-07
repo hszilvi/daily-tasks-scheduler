@@ -32,7 +32,10 @@ header {
   text-align: center;
   border-radius: 15px;
 }
-
+.container {
+  border: 2px solid red;
+  width: 800px;
+}
 .row {
   white-space: pre-wrap;
   height: 80px;
