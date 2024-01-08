@@ -17,3 +17,4 @@ Persist events between refreshes of a page
 
 <!-- bootstrap floppy icon / i + svg is needed -->
 https://icons.getbootstrap.com/icons/floppy/
+https://blog.logrocket.com/localstorage-javascript-complete-guide/
