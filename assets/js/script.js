@@ -1,6 +1,6 @@
 $(document).ready(function () {
 // add current date to header, format: "Saturday, January 6th" 
-// extra script needed in html (advanced dayjs) OK OK OK OK
+// extra script needed in html (advanced dayjs)
     const today = dayjs();
     $('#currentDay').text(today.format("dddd[,] MMMM Do"));
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
         },
     ];
 
-    // need a function to create timeblock container to HTML and populate with id, hour values and input tasks OK OK OK 
+    // need a function to create timeblock container to HTML and populate with id, hour values and input tasks
     taskDateContainer.forEach(function(timeBlock, index) {
         // call the callColor function which check hours and render colors to html elements
         callColor();
@@ -88,15 +88,12 @@ $(document).ready(function () {
         $('.container').append(taskBlock);
     
     });
-    // OK OK OK OK OK ---------------------------------------------------
+    // function to check time with current time and set the color
     function callColor() {
-        // console.log('color called');
         // need a variable to store the current hour 0-24format and convert to integer
         const currentHour = parseInt(today.format("H"));
-        // console.log(currentHour); 
         taskDateContainer.forEach(function(checkTime, index) {
             let checkedHour = checkTime.hourValue;
-            // console.log(checkedHour);
             if (checkedHour > currentHour) {
                 taskDateContainer[index].changeColor = "future";
             } else if (checkedHour < currentHour) {
@@ -105,51 +102,38 @@ $(document).ready(function () {
                 taskDateContainer[index].changeColor = "present";
             } index++
         } )
-        // console.log(taskDateContainer)
     }
-
-
-    // const storedData = JSON.parse(localStorage.getItem('storedData')) || [];
-
     // saveBtn to save task into local storage
     $('.saveBtn').on('click', function() {
         // add task input to taskDateContaner and store in local storage
-        const savedInput = $(this).siblings('textarea').val();
-        const timeInput = $(this).parent().text();
-        console.log(savedInput);
-        console.log(timeInput);
+        const savedTaskInput = $(this).siblings('textarea').val();
+        const timeInput = $(this).parent().attr('id');
         // setItem by  Key and Value
-        localStorage.setItem(timeInput, savedInput);
-        taskDateContainer.taskInput = JSON.parse(localStorage.getItem('savedInput'));
-        console.log(taskDateContainer.taskInput);
-        taskDateContainer[0].taskInput = JSON.parse(localStorage.getItem('9AM'));
-        console.log($('#9').val(localStorage.getItem('9AM')));
-        alert(JSON.parse(localStorage.getItem('9AM')));
+        localStorage.setItem(timeInput, savedTaskInput);
+        taskDateContainer.taskInput = JSON.parse(localStorage.getItem('savedTaskInput'));
+        //  2nd version -------------------------
+        // const dataStorage =    
+        //         {
+        //             time: $(this).parent().text(),
+        //             task: $(this).children('textarea').val() 
+        //         }
+        //     ;
+        // if (!($(this).children('textarea').val()) )  {
+        //     console.log('no data');
+        //     dataStorage = {};
+        // } else {
+        //     console.log(dataStorage);
+        //     storedData.push(dataStorage);
+        //     localStorage.setItem('storedData', JSON.stringify(localStorage));
+        // }
+        // dataStorage.time = $(this).parent().text();
+        // dataStorage.task = $(this).children('textarea').val();       
+        // console.log(storedData)
     })
 
-    // to do get data from local storage and add to website textarea
-    // for (let i = 9; i < 17; i++ ) {
-    //     $(`#{i}`).val(localStorage.getItem(i));
-    //     taskDateContainer[i-9].taskInput = $('#{i}').val(localStorage.getItem(i)).value;
-
-    // }
-    taskDateContainer[0].taskInput = localStorage.getItem('9AM');
-    // taskDateContainer[1].taskInput = $('#10').val(localStorage.getItem('10AM')).value;
-    // console.log($('#10').val(localStorage.getItem('10AM')))
-    // getItem value by key getItem('key')
-    $('#9').val(localStorage.getItem('9AM'));
-    $('#10').val(localStorage.getItem('10AM'));
-    $('#11').val(localStorage.getItem('11AM'));
-    $('#12').val(localStorage.getItem('12AM'));
-    $('#13').val(localStorage.getItem('1PM'));
-    $('#14').val(localStorage.getItem('2PM'));
-    $('#15').val(localStorage.getItem('3PM'));
-    $('#16').val(localStorage.getItem('4PM'));
-    $('#17').val(localStorage.getItem('5PM'));
-    console.log($('#9').val(localStorage.getItem('9AM')));
-
-
-
-    // to do if I refresh the page the saved data appear on page from local storage....
-
+    // to do if I refresh the page the saved data appear on page from local storage
+    for (let i = 9; i <= 17; i++ ) {
+        $(`#${i}`).children('textarea').val(localStorage.getItem(i));
+        console.log($(`#${i}`).children('textarea').val(localStorage.getItem(i)).key);
+    }
 })
