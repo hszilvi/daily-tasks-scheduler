@@ -56,3 +56,6 @@ https://icons.getbootstrap.com/icons/floppy/
 https://blog.logrocket.com/localstorage-javascript-complete-guide/
 <!-- loop through local storage if I have multiple keys with syntax I needed!!!-->
 https://attacomsian.com/blog/javascript-iterate-over-local-storage-keys
+https://discourse.webflow.com/t/how-to-populate-a-fied-in-form-based-on-data-from-collection-item/118788
+https://stackoverflow.com/questions/41653559/im-trying-to-get-a-variable-from-my-main-page-to-the-admin-panel
+
