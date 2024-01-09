@@ -1,20 +1,55 @@
 # daily-tasks-scheduler
 
+# Table of content
+
+[Overview](#Overview)
+[Screenshots](#Screenshots)
+[Links](#Links)
+[My_process](#My_process)
+[Built_with](#Built_with)
+[What_I_learned](#What_I_learned)
+[Continued_developement](#Continued_developement)
+[Author](#Author)
+[Sources](#Sources)
+
+# Overview
 The app should:
+-Display the current day at the top of the calender when a user opens the planner.
+-Present time blocks for standard business hours when the user scrolls down.
+-Color-code each time block based on past, present, and future when the time block is viewed.
+-Allow a user to enter an event when they click a time block
+-Save the event in local storage when the save button is clicked in that time block.
+-Persist events between refreshes of a page
+I finished the challenge using jQuery and events around local storage.
 
-Display the current day at the top of the calender when a user opens the planner.
+## Screenshots
+![stored data](./assets/images/show-local-storage.png)
+[show open page with task and time slots with different colors](./assets/images/daily-shedules-and-color-schemes.png)
 
-Present time blocks for standard business hours when the user scrolls down.
+### Links
+the github page of the solutin[https://github.com/hszilvi/daily-tasks-scheduler]
+live link[]
 
-Color-code each time block based on past, present, and future when the time block is viewed.
+## My_process
+At first I created the HTML file with all the rows. But I struggeld to manipulate elements correctly so decided to create html dynamically in js. 
+It was challenging to save data into local storage, as I was supposed to use jQuery. But now I have a deep understanding using 'this' and manipulate data using 'children'/'siblings' in jQuery. 
+Using multiple keys in local storage is not a common solution it was difficult to find help on internet. 
 
-Allow a user to enter an event when they click a time block
+### Built_with
+Javascript, jQuery, dayjs, VS code
 
-Save the event in local storage when the save button is clicked in that time block.
+## What_I_learned
+I learned a lot about jQuery, Local Storage.
 
-Persist events between refreshes of a page
+### Continued_developement
+local storage, jQuery methods
 
+## Author
+Szilvia Horvath
+GitHub[https://github.com/hszilvi]
+LinkedIn[https://www.linkedin.com/in/horvathszilvi/]
 
+# Sources
 <!-- bootstrap floppy icon / i + svg is needed -->
 https://icons.getbootstrap.com/icons/floppy/
 <!-- local storage -->
