@@ -28,7 +28,7 @@ I finished the challenge using jQuery and events around local storage.
 
 ### Links
 the github page of the solutin[https://github.com/hszilvi/daily-tasks-scheduler]
-live link[]
+live link[https://hszilvi.github.io/daily-tasks-scheduler/]
 
 ## My_process
 At first I created the HTML file with all the rows. But I struggeld to manipulate elements correctly so decided to create html dynamically in js. 
