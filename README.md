@@ -17,4 +17,7 @@ Persist events between refreshes of a page
 
 <!-- bootstrap floppy icon / i + svg is needed -->
 https://icons.getbootstrap.com/icons/floppy/
+<!-- local storage -->
 https://blog.logrocket.com/localstorage-javascript-complete-guide/
+<!-- loop through local storage if I have multiple keys with syntax I needed!!!-->
+https://attacomsian.com/blog/javascript-iterate-over-local-storage-keys

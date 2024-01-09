@@ -132,6 +132,7 @@ $(document).ready(function () {
     })
 
     // to do if I refresh the page the saved data appear on page from local storage
+    // need to target only child element textarea to get the exact data
     for (let i = 9; i <= 17; i++ ) {
         $(`#${i}`).children('textarea').val(localStorage.getItem(i));
         console.log($(`#${i}`).children('textarea').val(localStorage.getItem(i)).key);
